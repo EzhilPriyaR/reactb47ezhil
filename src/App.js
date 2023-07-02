@@ -1,18 +1,13 @@
 import React from 'react'
+import './App.css'
+import Applayout from './Components/Applayout'
 
-function Note({note}){
-  return (<li>{note.content}</li>);
-}
+function App() {
 
-function App(props) {
-  const { notes } = props;
-  console.log(notes);
+
   return (
     <div>
-      <h1>NOTES...</h1>
-      <ul>
-        {notes.map(note => <Note key = {note.id} note = {note}/>)}
-      </ul>
+      <Applayout />
     </div>
   )
 }

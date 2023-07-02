@@ -1,0 +1,92 @@
+#sideBar {
+    height: 100%;
+    width: 230px;
+    position: fixed;
+    z-index:  1;
+    top: 0;
+    left: 0;
+    background-color: rgb(198, 193, 193);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+#navigation  {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: Black;
+    display: block;
+    text-align: center;
+}
+
+#adminImage {
+    width: 80px;
+}
+
+#sidebar-heading {
+    text-align: center;
+}
+
+#sidebar-div{
+    margin-top: 40px;
+}
+
+.main {
+    margin-left: 230px;
+    padding: 20px;
+}
+
+#icon-button{
+    margin-left: 5px;
+}
+
+#image{
+    width: 40px;
+    margin-left: 5px;
+}
+
+#cardDiv{
+    padding-top: 25px;
+}
+
+#cardBody {
+    font-weight: bold;
+}
+
+#sapnOne{
+    color: darkslateblue;
+    font-size: 28px;
+}
+#spanTwo{
+    color: Black;
+    font-size: 28px;
+}
+#spanThree{
+    color: darkorange;
+    font-size: 28px;
+}
+#spanFour{
+    color: crimson;
+    font-size: 28px;
+}
+#spanFive{
+    color: darkcyan;
+    font-size: 28px;
+}
+#spanSix{
+    color: Tomato;
+    font-size: 28px;
+}
+
+#tableDiv{
+    padding-top: 25px;
+}
+
+#downloadDiv{
+    display: flex;
+    justify-content: right;
+}
+
+#table-division{
+    padding-top: 5px;
+}
