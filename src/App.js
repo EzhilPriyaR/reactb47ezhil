@@ -1,20 +1,33 @@
-import React from 'react'
-
-function Note({note}){
-  return (<li>{note.content}</li>);
-}
-
-function App(props) {
-  const { notes } = props;
-  console.log(notes);
+import "./App.css";
+import studentList from "./data";
+import React, { useState } from "react";
+import { Box } from "@mui/material";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Sidebar from "./Components/Sidebar";
+import Home from "./Components/Home";
+import Dashboard from "./Components/Dashboard";
+import AllStudent from "./Components/AllStudent";
+import AddStudent from "./Components/AddStudent";
+import StudentDetails from "./Components/StudentDetails";
+import EditStudent from "./Components/EditStudent";
+function App() {
+  const [student, setStudent] = useState(studentList);
   return (
-    <div>
-      <h1>NOTES...</h1>
-      <ul>
-        {notes.map(note => <Note key = {note.id} note = {note}/>)}
-      </ul>
-    </div>
-  )
+    <Router>
+      <Sidebar />
+      <Box component="main" sx={{ flexGrow: 1, p: 3 }} className="content">
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/dashboard" exact element={<Dashboard student={student} />} />
+          <Route path="/allstudent" exact element={<AllStudent student={student} setStudent={setStudent} />} />
+          <Route path="/allstudent/:index" element={<StudentDetails student={student} />} />
+          <Route path="/edit/:index" element={<EditStudent student={student} setStudent={setStudent} />} />
+          <Route path="/addstudent" exact element={<AddStudent student={student} setStudent={setStudent} />} />
+          <Route element={<Home />} />
+        </Routes>
+      </Box>
+    </Router>
+  );
 }
 
-export default App
+export default App;
